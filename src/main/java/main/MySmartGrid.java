@@ -19,8 +19,7 @@ public class MySmartGrid {
         // Tramitamos los consumos de manera secuencial
         String resultado;
         for (Consumo c:consumos) {
-        	resultado = red.getZona(c.getZona()).tramitarConsumo(c);
-            red.getZona(c.getZona()).getVentana().traza (c.getIdConsumo()+ " - Tramitado: "+resultado);
+        	
         }
         red.imprimeAuditoria();
     }
