@@ -25,15 +25,13 @@ public class MySmartGrid {
             t.start();
         }
 
-        for (Thread t : threads) {
-            try {
-                t.join();
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                System.err.println("No se han procesado todos los hilos al completo");
-                break;
+        try {
+            for (int i = 0; i < threads.size(); i++) {
+                threads.get(i).join();
             }
-        red.imprimeAuditoria();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        red.imprimeAuditoria();
     }
 }
