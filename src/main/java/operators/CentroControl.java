@@ -1,7 +1,6 @@
 package operators;
 
 import java.util.Random;
-
 import energy.Consumo;
 import energy.ZonaEnergetica;
 

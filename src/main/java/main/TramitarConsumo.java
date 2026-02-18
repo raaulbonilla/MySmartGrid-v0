@@ -12,6 +12,7 @@ public class TramitarConsumo implements Runnable {
 		this.consumo = consumo;
 	}
 	
+	@Override
 	public void run() {
 		String resultado = red.getZona(consumo.getZona()).tramitarConsumo(consumo);
         red.getZona(consumo.getZona()).getVentana().traza (consumo.getIdConsumo()+ " - Tramitado: "+resultado);
