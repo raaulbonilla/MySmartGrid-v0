@@ -54,7 +54,7 @@ public class ZonaEnergetica {
     	v.traza(s);
     }
     
-    public void traza (String s, Color color) {
+    public synchronized void traza (String s, Color color) {
     	v.traza(s,color);
     }
 
